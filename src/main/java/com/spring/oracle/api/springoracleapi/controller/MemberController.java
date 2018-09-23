@@ -108,7 +108,7 @@ public class MemberController {
         if (!memberResponse.equals(Optional.empty())) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new MemberResponse(false, "Can't delete member id " + id ));
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new MemberResponse(true, "Member id " + id + " has deleted successfully"));
+        return ResponseEntity.status(HttpStatus.OK).body(new MemberResponse(true, "Member id " + id + " has deleted successfully"));
     }
 
 }
